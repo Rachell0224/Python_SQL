@@ -1,1 +1,1 @@
-SELECT 'Hello PostgreSQL'
+SELECT 'Hello PostgreSQL' AS Hello
