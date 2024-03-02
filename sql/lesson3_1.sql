@@ -1,1 +1,4 @@
-SELECT NOW() AS 現在時間
+
+DROP DATABASE test;
+
+CREATE DATABASE test;
