@@ -26,13 +26,10 @@ WHERE first_name LIKE 'Ann%';
 /*取出first_name第1個字元是A,同時first_name的字元長度是3到5的資料*/
 SELECT *
 FROM customer
-WHERE first_name LIKE 'A%' AND first_name BETWEEN LENGTH(3)AND LENGTH(5);
-
-SELECT *
-FROM customer
-WHERE LENGTH(3);
+WHERE first_name LIKE 'A%' AND LENGTH(first_name) BETWEEN 3 AND 5;
 
 /*取出first_name,前3字為Bra,但last_name不是Motley*/
 SELECT *
 FROM customer
 WHERE first_name LIKE 'Bra%'AND NOT last_name='Motley'; 
+
