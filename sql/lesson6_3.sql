@@ -13,6 +13,12 @@ GROUP BY customer_id
 ORDER BY 應收帳款 DESC;
 
 SELECT first_name || ' ' || last_name AS full_name, SUM(amount) AS 應收帳款
-FROM payment LEFT JOIN customer USING customer_id /*ON payment.customer_id = customer.customer_id*/
+FROM payment LEFT JOIN customer USING (customer_id) /*ON payment.customer_id = customer.customer_id*/
 GROUP BY full_name
+ORDER BY 應收帳款 DESC;
+
+SELECT first_name || ' ' || last_name AS full_name, SUM(amount) AS 應收帳款
+FROM payment LEFT JOIN customer USING (customer_id)
+GROUP BY full_name
+HAVING SUM(amount) >= 200
 ORDER BY 應收帳款 DESC;
